@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+        <script src="p5.min.js"></script>
+        <script src="sketch.js"></script>
+        <script src="p5.sound.min.js"></script>
+    </head>
+    <body>
+        <form style="width: 650">
+            <fieldset>
+                <legend>Wave</legend>
+                <input  type="radio" id="sine" name="drone" value="sine"/>
+                <label for="sine">Sine</label>
+                <input type="radio" id="square" name="drone" value="square" />
+                <label for="square">Square</label>
+                <input type="radio" id="triangle" name="drone" value="triangle" />
+                <label for="triangle">Triangle</label>
+                <input type="radio" id="sawtooth" name="drone" value="sawtooth" checked/>
+                <label for="sawtooth">Sawtooth</label>
+                <div  id="rcorners" class="input-group" >
+                    Cutoff: <input id="cutoff" type="range" min=30 value=20000 max=25000 class="form-control">
+                    <span class="input-group-btn" id='freqVal'>
+                    </span>
+                </div>
+                <div  id="rcorners" class="input-group" >
+                    # lines: <input id="nLines" type="range" min=3 value=100 max=999 class="form-control">
+                    <span class="input-group-sp" id='nLinesSpan'>
+                    </span>
+                    <span class="input-group-btn" >
+                        <button onclick="buttonPressed()" class="btn btn-default" type="button">Reset</button>
+                    </span>
+                </div>
+            </fieldset>
+        </form>
+
+    </body>
+</html>
+
